@@ -1,0 +1,26 @@
+@require "../styl/include/variables"
+
+body 
+    font-family: sans-serif
+    background-color: #F8F8F8
+
+$markerColor = desaturate(spin(#0000FF, -15deg), 10%)
+$markerColorAlt = spin($markerColor, -170deg)
+
+.marker 
+    margin: .5em 0
+    border-width: 1px
+    border-style: solid 
+    border-color: lighten($markerColor, 80%)
+    padding: .5em 0
+
+    color: desaturate(darken($markerColor, 30%), 30%)
+    background-color: lighten($markerColor, 97%)
+    box-shadow: inset 0 0 15px lighten($markerColor, 87%)
+    text-align: center
+
+    &.alt
+        border-color: lighten($markerColorAlt, 40%)
+        color: desaturate(darken($markerColorAlt, 50%), 20%)
+        background-color: lighten($markerColorAlt, 94%)
+        box-shadow: inset 0 0 15px lighten($markerColorAlt, 80%)

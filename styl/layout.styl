@@ -1,0 +1,78 @@
+@require "include/variables"
+@require "include/functions"
+
+body
+    &.edge
+        margin: 0
+        padding: 0
+
+.layout
+    &.center
+        margin-left: auto
+        margin-right: auto
+    &.right
+        margin-left: auto
+    
+    &.fixed
+        @media screen and (min-width: $media-large)
+            width: $content-large
+        @media screen and (max-width: $media-large - 1) and (min-width: $media-medium)
+            width: $content-medium
+
+    &.relative
+        max-width: 60em
+        
+        &.small
+            max-width: 40em
+        
+        &.large
+            max-width: 800em
+
+/**
+ * optional wrapper for grid rows to crop row gutter offsets
+ */
+.grid
+    overflow: hidden
+
+.row
+            
+    .column
+        box-sizing: border-box
+        float: left
+        width: 100%
+        
+        span()
+        
+        @media screen and (min-width: $media-small)
+            span('small-')    
+
+        @media screen and (min-width: $media-medium)
+            span('medium-')
+            
+        @media screen and (min-width: $media-large)
+            span('large-')
+            
+    &:before, &:after
+        display: table
+        content: " "
+        
+    &:after
+        clear: both
+
+gutterParent('gutter-none', 0)
+gutterParent('gutter-small', $gutterSmall)
+gutterParent('gutter-medium', $gutterMedium)
+gutterParent('gutter-large', $gutterLarge)
+gutterParent('gutter-1ex', 1ex)
+gutterParent('gutter-2ex', 2ex)
+gutterParent('gutter-3ex', 3ex)
+gutterParent('gutter-4ex', 4ex)
+
+gutter('gutter-none', 0)
+gutter('gutter-small', $gutterSmall)
+gutter('gutter-medium', $gutterMedium)
+gutter('gutter-large', $gutterLarge)
+gutter('gutter-1ex', 1ex)
+gutter('gutter-2ex', 2ex)
+gutter('gutter-3ex', 3ex)
+gutter('gutter-4ex', 4ex)

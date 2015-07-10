@@ -1,0 +1,41 @@
+// LAYOUT VARIABLES
+
+$content-large = 1152px
+$media-large = 1200px
+$content-medium = 960px
+$media-medium = 1000px
+$media-small = 640px
+
+$gutterSmall = 10px
+$gutterMedium = 20px
+$gutterLarge = 30px
+
+// THEME VARIABLES
+
+$radius = 7px
+
+/**
+ * Default theme takes primary colors and adjust the lightness to give them a
+ * more uniform luminosity.
+ */
+color-adjust($color)
+    $lum = luminosity($color)
+    desaturate(lightness($color, (((1 - $lum) * 40) + 33) + '%'), 5%)
+    
+color-adjust-light($color)
+    lighten($color, 80%)
+
+$grey = color-adjust(rgb(190, 190, 190))
+$grey-light = color-adjust-light($grey)
+$red = color-adjust(rgb(255, 0, 0))
+$red-light = color-adjust-light($red)
+$orange = color-adjust(rgb(255, 127, 0))
+$orange-light = color-adjust-light($orange)
+$yellow = color-adjust(rgb(255, 255, 0))
+$yellow-light = color-adjust-light($yellow)
+$green = color-adjust(rgb(0, 255, 0))
+$green-light = color-adjust-light($green)
+$blue = color-adjust(rgb(0, 0, 255))
+$blue-light = color-adjust-light($blue)
+$purple = color-adjust(rgb(255, 0, 255))
+$purple-light = color-adjust-light($purple)

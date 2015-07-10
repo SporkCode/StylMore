@@ -1,0 +1,179 @@
+@require "include/variables"
+@require "include/functions"
+
+.button
+    padding: .4em 2ex
+    border-width: 1px
+    border-style: solid
+    border-radius: $radius
+    
+    box-shadow: 3px 3px 2px rgba(127, 127, 127, .35)
+        
+    cursor: pointer
+    font-size: 100%
+    font-family: inherit
+    box-sizing: content-box
+    display: inline-block
+    text-decoration: none
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);
+        
+    color-block(#FFF, $grey, darken($grey, 10%))
+    
+    &:hover
+        color-block($background: lighten($grey, 5%), $border: darken($grey, 5%))
+    
+    &:active
+        color-block($background: @background-color, $border: @border-color)
+        box-shadow: 1px 1px 2px rgba(127, 127, 127, .35)
+        
+    &:focus
+        outline-style: dotted;
+        outline-width: 3px;
+        outline-style: solid;
+        outline-color: rgba(100, 100, 0, 0.3);
+        outline-offset: -1px;
+        -moz-outline-radius: 8px;
+        
+    &::-moz-focus-inner
+        border: 0
+    
+    &.mini
+        font-size: 75%
+        
+    &.small
+        font-size: 80%
+        
+    &.large
+        font-size: 125%
+        
+    &.huge
+        font-size: 150%
+
+    &.red
+        color-block($background: $red, $border: darken($red, 10%))
+        &:hover
+            color-block($background: saturate(lighten($red, 15%), 30%), $border: darken($red, 5%))
+        &:active
+            color-block($background: @background-color, $border: @border-color)
+
+    &.orange
+        color-block($background: $orange, $border: darken($orange, 10%))
+        &:hover
+            color-block($background: saturate(lighten($orange, 5%), 20%), $border: darken($orange, 5%))
+        &:active
+            color-block($background: @background-color, $border: @border-color)
+
+    &.yellow
+        color-block($background: lighten($yellow, 8%), $border: lighten($yellow, 3%))
+        &:hover
+            color-block($background: lighten($yellow, 12%), $border: lighten($yellow, 7%))
+        &:active
+            color-block($background: @background-color, $border: @border-color)
+    
+    &.green
+        color-block($background: darken($green, 2%), $border: darken($green, 10%))
+        &:hover
+            color-block($background: lighten($green, 3%), $border: darken($green, 5%))
+        &:active
+            color-block($background: @background-color, $border: @border-color)
+    
+    &.blue
+        color-block($background: $blue, $border: darken($blue, 10%))
+        &:hover
+            color-block($background: saturate(lighten($blue, 15%), 10%), $border: darken($blue, 5%))
+        &:active
+            color-block($background: @background-color, $border: @border-color)
+    
+    &.purple
+        color-block($background: $purple, $border: darken($purple, 10%))
+        &:hover
+            color-block($background: lighten($purple, 12%), $border: darken($purple, 5%))
+        &:active
+            color-block($background: @background-color, $border: @border-color)
+    
+button.link
+    border: 0
+    background-color: inherit
+    cursor: pointer
+    color: blue
+    text-decoration: underline
+    
+    &:hover
+        color: lighten(@color, 30%)
+        
+.sign
+    border-width: 1px
+    border-style: solid
+    border-radius: $radius
+    padding: .5em 3ex
+    margin: 1em 0
+
+    color-block(darken($grey, 20%), $grey-light, darken($grey-light, 30%)) 
+
+    &.large
+        font-size: 115%
+        padding: 1em 5ex
+        
+        .title
+            margin: -1em -5ex 1em -5ex
+            padding-left: 5ex
+            padding-right: 5ex
+        
+    &.huge
+        font-size: 130%
+        padding: 2em 8ex
+
+        .title
+            margin: -2em -8ex 2em -8ex
+            padding-left: 8ex
+            padding-right: 8ex
+
+    &.red
+        color-block(darken($red, 10%), $red-light, darken($red-light, 24%))
+
+        .title
+            color-block($background: @border-color, $text: @background-color)
+    
+    &.orange
+        color-block(darken($orange, 15%), $orange-light, darken($orange-light, 35%))
+
+        .title
+            color-block($background: @border-color, $text: @background-color)
+    
+    &.yellow
+        color-block(darken($yellow, 10%), $yellow-light, darken($yellow-light, 55%))
+
+        .title
+            color-block($background: @border-color, $text: @background-color)
+    
+    &.green
+        color-block(darken($green, 20%), $green-light, darken($green-light, 48%))
+
+        .title
+            color-block($background: @border-color, $text: @background-color)
+    
+    &.blue
+        color-block(darken($blue, 10%), $blue-light, darken($blue-light, 20%))
+
+        .title
+            color-block($background: @border-color, $text: @background-color)
+    
+    &.purple
+        color-block(darken($purple, 15%), $purple-light, darken($purple-light, 25%))
+
+        .title
+            color-block($background: @border-color, $text: @background-color)
+
+    h1:first-child, h2:first-child, h3:first-child, 
+    h4:first-child, h5:first-child, h6:first-child
+        margin-top: .5em
+        
+    .title
+        color-block($background: @border-color, $text: @background-color)
+        margin: -.5em -3ex .25em -3ex
+        border-radius: $radius - 2px $radius - 2px 0 0
+        padding: 1px 3ex
+        
+        h1, h2, h3, h4, h5, h6
+            margin-bottom: .5em
+            
