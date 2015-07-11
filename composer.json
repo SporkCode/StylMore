@@ -9,10 +9,7 @@
         {
             "name": "Chris Schreiber",
             "email": "chris@sporkcode.com",
-            "homepage": "http://sporkcode.com",
-            "role": "Developer"
+            "homepage": "http://sporkcode.com"
         }
-    ],
-    "require": {
-    }
+    ]
 }
