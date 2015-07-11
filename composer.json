@@ -1,0 +1,18 @@
+{
+    "name": "sporkcode/stylmore",
+    "type": "library",
+    "description": "CSS framework built with Stylus",
+    "keywords": ["CSS","Stylus"],
+    "homepage": "https://github.com/SporkCode/StylMore",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Schreiber",
+            "email": "chris@sporkcode.com",
+            "homepage": "http://sporkcode.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    }
+}
