@@ -329,6 +329,7 @@ body.edge {
   border-color: #797979;
 }
 .button:hover {
+  color: #fff;
   background-color: #8c8c8c;
   border-color: #7f7f7f;
 }
